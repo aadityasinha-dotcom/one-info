@@ -7,33 +7,15 @@ import { ThemedView } from '@/components/ThemedView';
 import { Text, View } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { Link } from 'expo-router';
+import "../global.css";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>OneInfo</Text>
+    <View className="flex-1 items-center justify-center bg-white">
+      <Text className="text-3xl font-pblack">OneInfo</Text>
       <StatusBar style="auto" />
-      <Link href="/profile" style={{ color: 'blue' }}>Go to profile</Link>
+      <Link href="./tabs/home" style={{ color: 'blue' }}>Go to home</Link>
     </View>
   )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
-  },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
-  },
-});
