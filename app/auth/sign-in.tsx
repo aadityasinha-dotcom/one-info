@@ -5,6 +5,7 @@ import { ScrollView } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { images } from '../../constants';
 import FormField from '@/components/FormField';
+import CustomButton from '@/components/CustomButton';
 
 const SignIn = () => {
 
@@ -12,6 +13,11 @@ const SignIn = () => {
     email: '',
     password: '',
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const submit = () => {
+
+  }
 
   return (
     <SafeAreaView className='bg-primary h-full'>
@@ -38,6 +44,12 @@ const SignIn = () => {
           handleChangeText={(e) => setForm({ ...form, password: e})}
           otherStyles="mt-7"
           keyboardType="password"
+        />
+        <CustomButton 
+          title="Sign In"
+          handlePress={submit}
+          containerStyle="mt-7"
+          isLoading={isSubmitting}
         />
       </View>
     </SafeAreaView>

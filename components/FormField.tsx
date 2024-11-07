@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, TextInput, View, Image } from 'react-native';
+import { TouchableOpacity } from 'react-native';
+
+import { icons } from '../constants';
 
 interface props {
   title: string;
@@ -38,8 +41,21 @@ const FormField = ({
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}
           className='flex-1 text-white font-psemibold'
+          style={{ width: title === 'Password' ? '80%' : '100%' }}
           secureTextEntry={title === 'Password' && !showPassword}
         />
+
+        {title === 'Password' && (
+          <TouchableOpacity 
+            onPress={() => setShowPassword(!showPassword)}
+          >
+            <Image source={!showPassword ? icons.eye : icons.eyeHide}
+              className='w-6 h-6'
+              style={{ height: '60%', marginTop: 12 }}
+              resizeMode='contain'
+            />
+          </TouchableOpacity>
+        )}
       </View>
     </View>
   )
@@ -51,6 +67,7 @@ const styles = StyleSheet.create({
     borderColor: 'black',
     width: '100%',
     height: 64,
+    flexDirection: 'row',
     borderRadius: 18,
     marginTop: 10,
     paddingHorizontal: 16,
