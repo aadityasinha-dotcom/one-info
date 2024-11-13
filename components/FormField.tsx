@@ -44,7 +44,6 @@ const FormField = ({
           style={{ width: title === 'Password' ? '80%' : '100%' }}
           secureTextEntry={title === 'Password' && !showPassword}
         />
-
         {title === 'Password' && (
           <TouchableOpacity 
             onPress={() => setShowPassword(!showPassword)}
