@@ -13,11 +13,11 @@ const SignIn = () => {
     email: '',
     password: '',
   });
-  // const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // const submit = () => {
+  const submit = () => {
 
-  // }
+  }
 
   return (
     <SafeAreaView className='bg-primary h-full'>
