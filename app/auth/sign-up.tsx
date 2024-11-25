@@ -25,11 +25,11 @@ const SignUp = () => {
   return (
     <SafeAreaView className='bg-primary h-full'>
       <View className='w-full justify-center items-center min-h-[85vh] px-4 my-6'>
-        {/* <Image */}
-        {/*   source={images.logo} */}
-        {/*   resizeMode='contain' */}
-        {/*   className='w-[115px] h-[35px]' */}
-        {/* /> */}
+        <Image
+          source={images.logo}
+          resizeMode='contain'
+          className='w-[115px] h-[35px]'
+        />
         <Text className='text-2xl text-white 
           text-semibol mt-10 font-psemibold'>
           Log in to oneInfo
