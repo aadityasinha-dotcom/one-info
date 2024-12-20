@@ -11,12 +11,12 @@ SplashScreen.preventAutoHideAsync();
 
 const SignUp = () => {
 
-  const [form, setForm] = useState({
-    username: '',
-    email: '',
-    password: '',
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  // const [form, setForm] = useState({
+  //   username: '',
+  //   email: '',
+  //   password: '',
+  // });
+  // const [isSubmitting, setIsSubmitting] = useState(false);
 
   const submit = () => {
 
