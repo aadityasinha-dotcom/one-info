@@ -45,7 +45,7 @@ export default function App() {
             containerStyle='w-full mt-7'
           />
         </View>
-        {/* <StatusBar backgroundColor='#161622' style='light' /> */}
+        <StatusBar backgroundColor='#161622' style='light' />
       </ScrollView>
     </SafeAreaView>
   )
